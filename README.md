@@ -1,13 +1,19 @@
 # Credit-risk-analytics
-End-to-end credit risk analytics project: data cleaning, modeling and dashboards
+End-to-end credit risk analytics project: data generation, cleaning, modeling and interactive PowerBI dashboards.
+
 ## Project Overview 
+This project presents an end-to-end credit risk analytics workflow built on a synthetically generated retail loan portfolio.
+It covers the full data lifecycle, from data generation and modeling to data integration, quality validation, and preparation for analytics and visualization.
+
+The project follows a structured data architecture using Azure Databricks and a dimensional data model to ensure clarity, scalability, and analytical efficiency.
+The resulting dataset is designed to support portfolio analysis, credit risk modeling, and interactive dashboards, while respecting data security and confidentiality constraints.
 
 ## Data generation 
 The dataset used in this project is synthetically generated to simulate a retail credit portfolio.
 Loan-level records are created using statistical distributions and rule-based assumptions to reflect realistic lending characteristics, including borrower segmentation, product definitions, exposure amounts, and default behavior.
 The generation process is designed to preserve coherence between borrower profiles and credit risk dynamics, while avoiding the use of any real or sensitive data.
 ## Data Processing Approach 
-Data is processed using Azure Databricks following a Bronze–Silver–Gold architecture.
+Data is processed using Azure Databricks following a Bronze–Silver–Gold architecture based on Delta tables.
 ## Data Description
 
 The dataset is organized around a simple and consistent data model designed for credit risk analytics.
@@ -43,7 +49,5 @@ The data model follows a loan-level granularity, where each record in the main f
 Dimension tables (DIM_PRODUCT, DIM_CUSTOMER) are joined to the loan fact table using stable surrogate keys to enrich loan records with descriptive attributes.
 Theoretical cash flow data is linked at the loan level and derived from loan characteristics.
 
-Data transformations and joins are performed in Azure Databricks using Delta tables across Bronze and Silver layers.
+Data is ingested into the Bronze layer, while transformations and joins are performed in the Silver layer using Delta tables.
 The Gold layer exposes clean, analytics-ready tables designed for direct consumption in Power BI.
-
-
