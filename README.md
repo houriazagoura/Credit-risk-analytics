@@ -5,7 +5,7 @@ End-to-end credit risk analytics project: data generation, cleaning, modeling an
 This project presents an end-to-end credit risk analytics workflow built on a synthetically generated retail loan portfolio.
 It covers the full data lifecycle, from data generation and modeling to data integration, quality validation, and preparation for analytics and visualization.
 
-The project follows a structured data architecture using Azure Databricks and a dimensional data model to ensure clarity, scalability, and analytical efficiency.
+The project follows a structured data architecture using Azure Databricks and a dimensional data model to ensure clarity, scalability, and analytical efficiency. 
 The resulting dataset is designed to support portfolio analysis, credit risk modeling, and interactive dashboards, while respecting data security and confidentiality constraints.
 
 ## Data generation 
